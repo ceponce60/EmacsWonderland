@@ -5,20 +5,14 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;;(custom-set-variables
+(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(ansi-color-faces-vector
- ;;  [default default default italic underline success warning error])
- ;;'(ansi-color-names-vector
- ;;  ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
- ;; '(custom-enabled-themes (quote (tsdh-dark)))
- ;; '(menu-bar-mode t)
  '(package-selected-packages
    (quote
-    (creamsody-theme undo-tree autopair nlinum monokai-theme smex auto-complete adjust-parens org)))
+    (powerline multiple-cursors ace-jump-mode switch-window dracula-theme creamsody-theme undo-tree autopair nlinum monokai-theme smex auto-complete adjust-parens org))))
  ;;'(scroll-bar-mode nil)
  ;;'(tool-bar-mode nil))
 ;;(custom-set-faces
@@ -85,3 +79,15 @@
 (global-undo-tree-mode)
 
 (global-set-key (kbd "M-/") 'undo-tree-visualize)
+
+(global-set-key (kbd "C-M-z") 'switch-window)
+
+(global-set-key (kbd "C->") 'ace-jump-mode)
+
+(global-set-key (kbd "C-}") 'mc/mark-next-word-like-this)
+
+(global-set-key (kbd "C-{") 'mc/mark-previous-like-this)
+
+(powerline-center-theme)
+
+(setq powerline-default-separator 'wave)
